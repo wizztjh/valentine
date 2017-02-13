@@ -1,6 +1,6 @@
 <style>
 .cards {
-  transform: scale(0.7); 
+  transform: scale(0.7);
 }
 body {
     background-image: url("bg1.png");
@@ -70,6 +70,14 @@ body {
 .card-toggle:checked + .card .inner-right {
   -webkit-transform: rotateY(-15deg);
 }
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+#heart{
+  position: absolute;
+}
 </style>
 
 <div class='cards'>
@@ -77,6 +85,7 @@ body {
   <label class='card' for="card-toggle-1">
     <div class='front face'>
       <img src='frontpage.jpg' />
+      <img id='heart' src='heart.jpg'/>
     </div>
     <div class="inner-left face">
       <img src='inside1.jpg' />
